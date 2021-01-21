@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		.container {
+			width: 300px;
+			height: 300px;
+			display: inline-grid;
+			/*grid-template-columns: 90px 1fr minmax(20px, 1fr);*/
+			/*grid-template-rows: repeat(auto-fill, 50px);*/
+
+			/*grid-template-columns: 30px 30px 40px;*/
+			/*grid-template-rows: 20px 30px 40px ;*/
+
+			/*grid-template-columns: 33.3% 33.3% 33.3%;*/
+			/*grid-template-rows: 33.3% 33.3% 33.3%;*/
+
+			/*grid-template-columns: repeat(2, 10px 1fr 2fr);*/
+
+			/*grid-template-columns: repeat(auto-fill, 70px);*/
+			/*grid-template-rows: repeat(auto-fill, 70px);*/
+
+			/*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr minmax(80px, 2fr);*/
+
+			/*grid-template-columns: [c1] 50px [c2] auto [c3] 50px;*/
+			/*grid-template-rows: [r1] 50px [r2] auto [r3] 50px;*/
+
+			/*grid-template-columns: repeat(3, 1fr);*/
+			/*grid-template-rows: repeat(3, 1fr);*/
+
+			/*place-items: center center;*/
+			/*justify-content: center;*/
+			/*justify-content: space-evenly;*/
+			/*place-content: stretch stretch;*/
+
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+			grid-auto-flow: row;
+			 grid-template-areas: 'a b c'
+                       'd e f'
+                       'g h i'
+                       'j k l'
+                       'm n o';
+		}
+		.item {
+			color: black;
+			font-size: 40px;
+			font-weight: bold;
+		}
+		.item:nth-child(1) {
+			background-color: red;
+			/*grid-column-start: 1;*/
+			/*grid-column-end: 3;*/
+			/*grid-column: 2;*/
+			/*grid-row-start: 1;*/
+			/*grid-row-end: 2;*/
+			/*grid-row: 2;*/
+			/*z-index: 100;*/
+			/*grid-column-start: span 2;*/
+			grid-area: 3 / 2 / 4 / 3;
+		}
+		.item:nth-child(2) {
+			background-color: blue;
+			/*grid-column-start: 1;*/
+			/*grid-column-end: 3;*/
+			/*grid-column: 1;*/
+			/*grid-row-start: 1;*/
+			/*grid-row-end: 2;*/
+			/*grid-row: 1;*/
+			/*z-index: 20;*/
+			/*grid-column-start: span 2;*/
+
+		}
+		.item:nth-child(3) {
+			background-color: yellow;
+		}
+		.item:nth-child(4) {
+			background-color: orange;
+		}
+		.item:nth-child(5) {
+			background-color: green;
+		}
+		.item:nth-child(6) {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+	</div>
+</body>
+</html>
